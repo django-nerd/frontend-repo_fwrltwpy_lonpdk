@@ -1,71 +1,37 @@
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import TrustBar from './components/TrustBar'
+import ProblemSolution from './components/ProblemSolution'
+import HowItWorks from './components/HowItWorks'
+import Privacy from './components/Privacy'
+import Pricing from './components/Pricing'
+import FAQ from './components/FAQ'
+import Footer from './components/Footer'
+
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Subtle pattern overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.05),transparent_50%)]"></div>
-
-      <div className="relative min-h-screen flex items-center justify-center p-8">
-        <div className="max-w-2xl w-full">
-          {/* Header with Flames icon */}
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center justify-center mb-6">
-              <img
-                src="/flame-icon.svg"
-                alt="Flames"
-                className="w-24 h-24 drop-shadow-[0_0_25px_rgba(59,130,246,0.5)]"
-              />
-            </div>
-
-            <h1 className="text-5xl font-bold text-white mb-4 tracking-tight">
-              Flames Blue
-            </h1>
-
-            <p className="text-xl text-blue-200 mb-6">
-              Build applications through conversation
-            </p>
+    <div className="min-h-screen bg-white">
+      <Navbar />
+      <main>
+        <Hero />
+        <TrustBar />
+        <ProblemSolution />
+        <HowItWorks />
+        <Privacy />
+        {/* Final CTA banner */}
+        <section className="py-16 bg-gradient-to-r from-[#FF4F4F] to-rose-500 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <h3 className="text-2xl font-semibold tracking-tight">Stop sending emails into the void.</h3>
+            <a href="#" className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white text-slate-900 font-medium shadow">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" className="w-5 h-5"><path fill="#ff3d00" d="M24 9.5c3.2 0 6.1 1.1 8.4 2.9L39 5.8C35 2.6 29.8 1 24 1 14.8 1 6.8 6.6 3.2 14.5l9.3 7.2C13.9 15.3 18.4 9.5 24 9.5z"/><path fill="#4caf50" d="M46.5 24c0-2.9-.5-5.6-1.5-8.1h-21v9.6h12.1c-.6 3-2.3 5.6-4.8 7.3l9.3 7.2C44.8 36.4 46.5 30.6 46.5 24z"/><path fill="#1976d2" d="M24 47c6.5 0 12-2.4 16.1-6.4l-9.3-7.2C28.8 35.2 26.6 36 24 36c-5.6 0-10.1-3.8-11.5-8.9l-9.3 7.2C6.8 41.4 14.8 47 24 47z"/><path fill="#ffc107" d="M12.5 27.1c-.3-1-.5-2-.5-3.1s.2-2.1.5-3.1l-9.3-7.2C1.1 16.8 0 20.3 0 24s1.1 7.2 3.2 10.3l9.3-7.2z"/></svg>
+              Add to Chrome
+            </a>
           </div>
-
-          {/* Instructions */}
-          <div className="bg-slate-800/50 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-8 shadow-xl mb-6">
-            <div className="flex items-start gap-4 mb-6">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                1
-              </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Describe your idea</h3>
-                <p className="text-blue-200/80 text-sm">Use the chat panel on the left to tell the AI what you want to build</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4 mb-6">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                2
-              </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Watch it build</h3>
-                <p className="text-blue-200/80 text-sm">Your app will appear in this preview as the AI generates the code</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                3
-              </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Refine and iterate</h3>
-                <p className="text-blue-200/80 text-sm">Continue the conversation to add features and make changes</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Footer */}
-          <div className="text-center">
-            <p className="text-sm text-blue-300/60">
-              No coding required • Just describe what you want
-            </p>
-          </div>
-        </div>
-      </div>
+        </section>
+        <Pricing />
+        <FAQ />
+      </main>
+      <Footer />
     </div>
   )
 }
